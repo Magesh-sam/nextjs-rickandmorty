@@ -7,10 +7,30 @@ module.exports = {
   ],
   theme: {
     extend: {
+      screens: {
+        'sm': '350px',
+  
+        'md': '650px',
+  
+        'lg': '1300px',
+  
+        'xl': '1920px',
+  
+
+      },
+      colors: {
+        "primary-bg": "var(--primary-bg)",
+        "secondary-bg": "var(--secondary-bg)",
+        "primary-text": "var(--primary-text)",
+        "secondary-text": "var(--secondary-text)",
+      },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+      },
+      boxShadow: {
+        'custom': '0px 10px 15px -3px var(--primary-text)',
       },
     },
   },

@@ -2,26 +2,55 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+@keyframes loader {to{transform: rotate(1turn)}}
+
+
+:root{
+  --primary-bg:#1C5E14;
+  --primary-text:#BBDD88;
+  --secondary-bg:#1C7C7C;
+  --secondary-text:#264A84;
+}
+::-webkit-scrollbar{
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--primary-text);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--secondary-bg);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  min-height: 100vh;
+  max-width: 100vw;
+  overflow-x: hidden;
+  position: relative;
+}
+img{
+  max-width: 300px;
+  max-height:300px ;
+  aspect-ratio: 1/1;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+button{
+  cursor: pointer;
+  padding: 10px;
+  transition: all 0.3s ease-in-out;
 }
+button:hover{
+  background-color: var(--primary-bg);
+  color: var(--primary-text);
+}
+button:disabled:hover{
+  background: grey;
+  color: black;
+  cursor: not-allowed;
+}
+
+
